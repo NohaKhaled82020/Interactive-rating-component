@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("assets/fonts/Overpass-Regular.ttf");
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("assets/fonts/Overpass-Bold.ttf");
+}
+@import "~bootstrap/scss/bootstrap";
+
+@import "assets/scss/variables";
+@import "assets/scss/mixins";
+@import "assets/scss/buttons";
+@import "assets/scss/global";
+@import "assets/scss/home";

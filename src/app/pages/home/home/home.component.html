@@ -1,0 +1,42 @@
+<div class="home">
+  <div class="container">
+    <div class="card" *ngIf="!show">
+      <button class="btn btn-icon btn-sm" title="rating star">
+        <img src="assets/images/icon-star.svg" alt="" />
+      </button>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="card__buttons">
+        <ul>
+          <li *ngFor="let btn of ratingList">
+            <button
+              class="btn btn-icon"
+              title="rating star"
+              [value]="btn.value"
+              (click)="selectedValue(btn.value)"
+            >
+              {{ btn.text }}
+            </button>
+          </li>
+        </ul>
+      </div>
+      <button class="btn btn-primary" (click)="send()" title="sumbit rating">
+        SUBMIT
+      </button>
+    </div>
+    <div class="card success" *ngIf="show">
+      <svg viewBox="0 0 162 108">
+        <use xlink:href="assets/images/sprite.svg#thank-you"></use>
+      </svg>
+      <span>You selected {{ value }} out of 5</span>
+      <h2>Thank you!</h2>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div>
+  </div>
+</div>
